@@ -10,6 +10,9 @@
 # dependencies
 /node_modules
 
+# environment variables
+/src/app/environments
+
 # profiling files
 chrome-profiler-events*.json
 

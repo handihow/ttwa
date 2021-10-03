@@ -1,0 +1,23 @@
+<mat-toolbar color="accent">
+  <a mat-icon-button routerLink="/blogs">
+    <mat-icon aria-label="Back icon">arrow_back</mat-icon>
+  </a>
+  {{ blogPost?.fields.title }}
+</mat-toolbar>
+
+<div
+  fxLayout="row"
+  fxLayout.lt-sm="column"
+  fxLayoutAlign="start start"
+  fxLayoutGap="10px"
+>
+  <div fxFlex class="container">
+    <h2 *ngIf="blogPost?.fields.subtitle">{{ blogPost?.fields.subtitle }}</h2>
+    <div [innerHTML]="html"></div>
+  </div>
+  <div [fxFlex]="40">
+    <div *ngFor="let photo of blogPost?.fields.photos">
+      <app-image [contentfulImage]="photo.fields" [canFocus]="true"></app-image>
+    </div>
+  </div>
+</div>
