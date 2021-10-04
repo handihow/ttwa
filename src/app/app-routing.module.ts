@@ -8,6 +8,11 @@ const routes: Routes = [
       import('./blogs/blogs.module').then((m) => m.BlogsModule),
   },
   {
+    path: 'information',
+    loadChildren: () =>
+      import('./information/information.module').then((m) => m.InformationModule),
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'blogs',

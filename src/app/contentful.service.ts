@@ -17,7 +17,7 @@ export class ContentfulService {
   constructor() {}
 
   async getEntries(
-    contentType: 'blogPost',
+    contentType: 'blogPost' | 'accessibilityInformationImage',
     query?: object
   ): Promise<Entry<any>[]> {
     const res = await this.cdaClient.getEntries(

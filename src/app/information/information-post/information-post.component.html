@@ -1,1 +1,19 @@
-<p>information-post works!</p>
+<mat-toolbar color="accent">
+  <a mat-icon-button routerLink="/information">
+    <mat-icon aria-label="Back icon">arrow_back</mat-icon>
+  </a>
+  {{ accessibilityInformationImage?.fields.title }}
+</mat-toolbar>
+
+<div
+  fxLayout="row"
+  fxLayout.lt-sm="column"
+  fxLayoutAlign="start start"
+>
+  <div fxFlex class="container">
+    <div>{{accessibilityInformationImage.fields.description}}</div>
+  </div>
+  <div [fxFlex]="60">
+      <app-image [contentfulImage]="accessibilityInformationImage.fields.image.fields" [canFocus]="true"></app-image>
+  </div>
+</div>

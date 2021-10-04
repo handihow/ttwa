@@ -1,5 +1,5 @@
 <mat-toolbar color="accent">Blog</mat-toolbar>
-<mat-nav-list>
+<mat-nav-list class="container">
   <a [routerLink]="[blogPost.sys.id]" mat-list-item *ngFor="let blogPost of blogPosts">
     <img matListAvatar [src]="getThumbnail(blogPost)" alt="avatar" />
     <h3 matLine>{{ blogPost.fields.title }}</h3>

@@ -1,1 +1,10 @@
-<p>information-list works!</p>
+<mat-toolbar color="accent">Informatie</mat-toolbar>
+<mat-nav-list class="container">
+  <a [routerLink]="[accessibilityInformationImage.sys.id]" mat-list-item *ngFor="let accessibilityInformationImage of accessibilityInformationImages">
+    <img matListAvatar [src]="getThumbnail(accessibilityInformationImage)" alt="avatar" />
+    <h3 matLine>{{ accessibilityInformationImage.fields.title }}</h3>
+    <p matLine>
+      {{ accessibilityInformationImage.fields.description }}
+    </p>
+  </a>
+</mat-nav-list>
