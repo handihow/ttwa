@@ -13,9 +13,14 @@ const routes: Routes = [
       import('./information/information.module').then((m) => m.InformationModule),
   },
   {
+    path: 'advice',
+    loadChildren: () =>
+      import('./advice/advice.module').then((m) => m.AdviceModule),
+  },
+  {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'blogs',
+    redirectTo: 'advice',
   },
 ];
 

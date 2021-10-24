@@ -10,7 +10,7 @@
     <mat-nav-list>
       <a mat-list-item routerLink="/blogs">Blog</a>
       <a mat-list-item routerLink="/information">Informatie</a>
-      <a mat-list-item href="#">Advies</a>
+      <a mat-list-item routerLink="/advice">Advies</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -27,9 +27,13 @@
       <span>Tuurlijk Toegankelijk</span>
       <ng-container *ngIf="!(isHandset$ | async)">
         <span class="horizontal-spacer"></span>
-        <a mat-button routerLink="/blogs">Blog</a>
-        <a mat-button routerLink="/information">Informatie</a>
-        <a mat-button href="#">Advies</a>
+        <a mat-button routerLink="/blogs" routerLinkActive="mat-accent">Blog</a>
+        <a mat-button routerLink="/information" routerLinkActive="mat-accent"
+          >Informatie</a
+        >
+        <a mat-button routerLink="/advice" routerLinkActive="mat-accent"
+          >Advies</a
+        >
       </ng-container>
     </mat-toolbar>
     <router-outlet></router-outlet>

@@ -1,8 +1,10 @@
-<h2 mat-dialog-title>{{data.title}}</h2>
+<h2 mat-dialog-title>{{ data.title }}</h2>
 <mat-dialog-content>
   <app-image [contentfulImage]="data"></app-image>
 </mat-dialog-content>
 <mat-dialog-actions>
   <button mat-button mat-dialog-close>Sluiten</button>
-  <a [href]="data.file.url" target=_blank mat-button>Full screen</a>
+  <a [href]="'https:' + data.file.url" target="_blank" mat-button
+    >Full screen</a
+  >
 </mat-dialog-actions>
